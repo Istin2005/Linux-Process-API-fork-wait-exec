@@ -25,7 +25,24 @@ Test the C Program for the desired output.
 
 ## C Program to print process ID and parent Process ID using Linux API system calls
 
+```#include <stdio.h>
+#include <sys/types.h>
+#include <unistd.h>
+int main(void)
+{	//variable to store calling function's process id
+	pid_t process_id;
+	//variable to store parent function's process id
+	pid_t p_process_id;
+	//getpid() - will return process id of calling function
+	process_id = getpid();
+	//getppid() - will return process id of parent function
+	p_process_id = getppid();
+	//printing the process ids
 
+//printing the process ids
+	printf("The process id: %d\n",process_id);
+	printf("The process id of parent function: %d\n",p_process_id);
+	return 0; }```
 
 
 
@@ -41,6 +58,9 @@ Test the C Program for the desired output.
 
 
 ##OUTPUT
+
+![op1 oc ex 2](https://github.com/Istin2005/Linux-Process-API-fork-wait-exec/assets/144979137/1bd67b7c-9e4a-4aea-bb41-2f197a11d471)
+
 
 
 
